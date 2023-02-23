@@ -11,11 +11,11 @@ class App{
 
        $ruta=Request::getRuta();
 
-       Log::info($ruta);
+      // Log::info($ruta);
 
        $dijelovi=explode('/',substr($ruta,1)); //rastvaranje rute
 
-       Log::info($dijelovi);
+      // Log::info($dijelovi);
 
        //idemo razaznati controler
        $controller='Index';
@@ -26,7 +26,7 @@ class App{
        else{
         $controller=ucfirst($dijelovi[0]).'Controller';
        }
-       Log::info($controller);
+      // Log::info($controller);
 
        //idemo razaznati controler
        $metoda='index';
@@ -37,15 +37,16 @@ class App{
        $metoda=$dijelovi[1];
        }
 
-       Log::info($metoda);
+       // Log::info($metoda);
 
-       if(class_exists($controller)&& method_exists($controller,$metoda)){
-        //izvedi ju
-        $instanca=new $controller();
-        $instanca->$metoda();
-       }
-       else{
+       if(!(class_exists($controller)&& method_exists($controller,$metoda))){
+        
         echo 'ne postoji niti postoji '.$controller. '-&gt;'.$metoda;
-           }
+      return;
+    }
+       
+       //izvedi ju
+       $instanca=new $controller();
+       $instanca->$metoda();
     }
 }

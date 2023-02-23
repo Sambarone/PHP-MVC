@@ -3,6 +3,10 @@
 class IndexController{
 
     public function index(){
-        echo 'hello index conroller';
+
+    
+        $view = new View();
+        $view->render('index');
     }
+
 }
