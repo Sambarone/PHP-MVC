@@ -35,5 +35,6 @@ spl_autoload_register(function($klasa){
         }
         }
 });
-
-new Osoba();
+App::start();
+// $o=new Osoba();
+//echo $o->getIme();
