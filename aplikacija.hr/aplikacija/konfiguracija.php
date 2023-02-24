@@ -1,0 +1,3 @@
+<?php
+
+return ['url'=>'http://aplikacija.hr/'];

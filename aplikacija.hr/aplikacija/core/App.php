@@ -49,4 +49,17 @@ class App{
        $instanca=new $controller();
        $instanca->$metoda();
     }
+    public static function config($kljuc){
+        $configFile=BP_APP.'konfiguracija.php';
+
+        if(!file_exists($configFile)){
+            return 'Konfiguracijska datoteka ne postoji';
+        }
+        $config=require $configFile;
+
+        if(!isset($config[$kljuc])){
+            return 'kljuc'. $kljuc . 'nije postavljen u konfiguraciji';
+        }
+        return $config[$kljuc];
+    }
 }

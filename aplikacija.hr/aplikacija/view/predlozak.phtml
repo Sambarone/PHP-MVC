@@ -1,20 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Foundation for Sites</title>
+    <link rel="stylesheet" href="<?= App::config('url')?>public/css/foundation.css">
+    <link rel="stylesheet" href="<?= App::config('url')?>public/css/app.css">
 </head>
+
 <body>
-    <h1>Naslov u predlošku - zajednički dio stranice</h1>
 
-    <?php echo $sadrzaj?> 
-    <!--metode iz kontrolera će uvijek zvati zajednički dio
-i reći koji specifični dio tamo treba staviti -->
+    <div class="grid-container">
+        <div class="grid-x grid-padding-x">
+            <div class="large-12 cell">
+                <?= $sadrzaj ?>
+            </div>
+        </div>
 
-    <ol>
-        <li>Stavka</li>
-    </ol>
+    </div>
+
+
+    <script src="<?=App::config('url')?>public/js/vendor/jquery.js"></script>
+    <script src="<?=App::config('url')?>public/js/vendor/what-input.js"></script>
+    <script src="<?=App::config('url')?>public/js/vendor/foundation.js"></script>
+    <script src="<?=App::config('url')?>public/js/app.js"></script>
 </body>
+
 </html>
