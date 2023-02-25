@@ -1,0 +1,44 @@
+<form data-abide novalidate action="" method="post">
+  <div class="grid-x grid-margin-x">
+    <div class="cell">
+      <div data-abide-error class="alert callout" style="display: none;">
+        <p><i class="fi-alert"></i> Pogrešan unos email-a ili lozinke.</p>
+      </div>
+    </div>
+  </div>
+  <div class="grid-x grid-margin-x">
+
+  <div class="cell small-12">
+      <label for="email">Unos e-mail adrese
+        <input type="email" id="email" name="email" placeholder="netko@domena.hr" aria-describedby="exampleHelpTextemail" required >
+        <span class="form-error">
+          Obavezan unos!
+        </span>
+      <p class="help-text" id="exampleHelpTextemail">Molimo vas unesite e mail adresu</p>
+      </label>
+    </div>
+    
+    
+    <div class="cell small-12">
+      <label for="lozinka">Unos lozinke obavezan
+        <input type="password" id="lozinka" name="lozinka" placeholder="yeti4preZ" aria-describedby="exampleHelpTextPassword" required >
+        <span class="form-error">
+          Obavezan unos!
+        </span>
+      <p class="help-text" id="exampleHelpTextPassword">Molimo vas unesite lozinku</p>
+      </label>
+    </div>
+    
+  </div>
+ 
+  
+  <div class="grid-x grid-margin-x">
+    <fieldset class="cell medium-6">
+      <button class="button" type="submit" value="Submit">Prijava</button>
+    </fieldset>
+    <fieldset class="cell medium-6">
+      <button class="button" type="reset" value="Reset">Poništi</button>
+    </fieldset>
+  </div>
+</form>
+

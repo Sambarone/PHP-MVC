@@ -16,6 +16,11 @@ class IndexController extends Controller{
         $this->view->render('kontakt');
     }
 
+    public function prijava(){
+
+        $this->view->render('prijava');
+    }
+
    
 
 }
