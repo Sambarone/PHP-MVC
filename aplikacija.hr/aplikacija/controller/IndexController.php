@@ -21,6 +21,10 @@ class IndexController extends Controller{
         $this->view->render('prijava');
     }
 
+    public function proba(){
+
+        $this->view->render('proba1');
+    }
    
 
 }
