@@ -1,7 +1,8 @@
 <?php
 
 
-class nadzornaplocaController extends Controller 
+class nadzornaplocaController 
+extends AutorizacijaController 
 {
 
 
