@@ -5,10 +5,7 @@ class IndexController extends Controller{
     public function index(){
    
         
-        $this->view->render('index', 
-        ['iznos'=>12,
-        'podaci'=>[4,5,6,7,8,7,4]
-    ]);
+        $this->view->render('index');
     }
 
     public function kontakt(){
@@ -18,7 +15,10 @@ class IndexController extends Controller{
 
     public function prijava(){
 
-        $this->view->render('prijava');
+        $this->view->render('prijava', [
+            'poruka'=>'',
+            'email'=>''
+        ]);
     }
 
     public function proba(){
