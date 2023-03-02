@@ -16,7 +16,14 @@
   </div>
   <div class="top-bar-right">
     <ul class="menu">
-      <li><a href="<?= App::config('url');?>index/prijava"><button type="button" class="button">Prijava</button></a></li>
+      <?php if(!App::auth()): ?>
+        <li><a href="<?= App::config('url');?>index/prijava"><button type="button" class="button">Prijava</button></a></li>
+        <?php else:?>
+          <li><a href="<?= App::config('url');?>index/odjava"><button type="button" class="button">Odjava
+            <?php echo App::operater(); ?>
+          </button></a></li>
+          <?php endif;?>
+      
     </ul>
   </div>
 </div>

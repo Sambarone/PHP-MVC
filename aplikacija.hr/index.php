@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 //prvo je potrebno učuitati autloading
 //ova datoteka će definirati temeljne preduvjete
 

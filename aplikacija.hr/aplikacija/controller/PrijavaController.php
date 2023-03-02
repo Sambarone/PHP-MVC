@@ -42,7 +42,11 @@ class PrijavaController  extends Controller //ovim postižemo pozivanje view iz 
 
                 //uspješno logiran
 
-                
+                $_SESSION ['auth']=$operater;
+                header('location:'.App::config('url').
+                'nadzornaploca/index');
+
+
 
 
     }

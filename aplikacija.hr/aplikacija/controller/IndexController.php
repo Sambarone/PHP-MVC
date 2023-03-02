@@ -25,6 +25,14 @@ class IndexController extends Controller{
 
         $this->view->render('proba1');
     }
+
+    public function odjava(){
+        unset($_SESSION['auth']);
+        session_destroy();
+        header('location:'.App::config('url'));
+
+        
+    }
    
 
 }
