@@ -8,8 +8,10 @@ public function __construct(){
         $this->view->render('prijava', [
             'poruka'=>'Prvo se prijavite',
             'email'=>''
-        ])
+        ]);
+    
     }
+
 }
 
 }
