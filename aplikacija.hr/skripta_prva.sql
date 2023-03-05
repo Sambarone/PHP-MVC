@@ -16,13 +16,20 @@ create table operater (
     ime varchar(50) not null,
     prezime varchar(50) not null,
     email varchar(50) not null,
-    lozinka char(61) not null
+    lozinka char(61) not null,
+    uloga varchar(20) not null
 );
 
-insert into operater (ime, prezime,email,lozinka)
+insert into operater (ime, prezime,email,lozinka, uloga)
 values ('Edunova,', 'Operater', 'oper@edunova.hr',
-'$2y$10$O1MmWw0l0pfFpW9dR3W6VOwONaxqkdeNB0Ylr9EYh5xgUc54iVlAW');
+'$2y$10$O1MmWw0l0pfFpW9dR3W6VOwONaxqkdeNB0Ylr9EYh5xgUc54iVlAW',
+'oper');
 
+
+insert into operater (ime, prezime,email,lozinka, uloga)
+values ('Admin,', 'Operater', 'admin@edunova.hr',
+'$2y$10$O1MmWw0l0pfFpW9dR3W6VOwONaxqkdeNB0Ylr9EYh5xgUc54iVlAW',
+'admin');
 
 
 create table smjer(

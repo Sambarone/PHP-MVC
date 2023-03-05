@@ -71,4 +71,9 @@ class App{
         return $_SESSION['auth']->ime. ' '
         . $_SESSION['auth']->prezime;
     }
+
+    public static function admin ()
+    {
+        return $_SESSION['auth']->uloga==='admin';
+    }
 }

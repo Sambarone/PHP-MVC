@@ -7,27 +7,43 @@
   <div class="top-bar-left">
     <ul class="dropdown menu" data-dropdown-menu>
       <li>
-        <a href="<?= App::config('url');?>"><strong><?= App::config('nazivAPP');?></strong> </a></li>
-        <?php if(App::auth()): ?>
-        <li><a href="<?= App::config('url');?>nadzornaploca/index">Nadzorna ploca</a></li>
-          <?php endif;?>
+        <a href="<?= App::config('url'); ?>"><strong><?= App::config('nazivAPP'); ?></strong> </a>
+      </li>
+      <?php if (App::auth()) : ?>
+        <li><a href="<?= App::config('url'); ?>nadzornaploca/index">Nadzorna ploca</a></li>
+        <?php if (App::admin()) : ?>
+          <li><a href="<?= App::config('url'); ?>operater/index">Operateri</a></li>
+        <?php else : ?>
+          <li>
+            <a href="#">Programi</a>
+            <ul class="vertical menu">
+              <li><a href="#">Smjerovi</a></li>
+              <li><a href="#">Polaznici</a></li>
+              <li><a href="#">Predavači</a></li>
+              <li><a href="#">Grupe</a></li>
+             </ul>
+          </li>
+
+
+        <?php endif; ?>
+      <?php endif; ?>
 
       <li>
-        <a href="<?= App::config('url');?>index/kontakt">Kontakt</a>
+        <a href="<?= App::config('url'); ?>index/kontakt">Kontakt</a>
       </li>
-      
+
     </ul>
   </div>
   <div class="top-bar-right">
     <ul class="menu">
-      <?php if(!App::auth()): ?>
-        <li><a href="<?= App::config('url');?>index/prijava"><button type="button" class="button">Prijava</button></a></li>
-        <?php else:?>
-          <li><a href="<?= App::config('url');?>index/odjava"><button type="button" class="button">Odjava
-            <?php echo App::operater(); ?>
-          </button></a></li>
-          <?php endif;?>
-      
+      <?php if (!App::auth()) : ?>
+        <li><a href="<?= App::config('url'); ?>index/prijava"><button type="button" class="button">Prijava</button></a></li>
+      <?php else : ?>
+        <li><a href="<?= App::config('url'); ?>index/odjava"><button type="button" class="button">Odjava
+              <?php echo App::operater(); ?>
+            </button></a></li>
+      <?php endif; ?>
+
     </ul>
   </div>
 </div>

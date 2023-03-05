@@ -3,6 +3,22 @@
 
 class Operater 
 {
+    public static function read()
+    {
+        $veza=DB::getInstance();
+
+        $izraz=$veza->prepare('
+
+        select *from operater
+        ');
+        $izraz->execute();
+        return $izraz->fetchAll();
+
+
+
+
+    }
+
     public static function autoriziraj ($email,$password){
         $veza=DB::getInstance();
 
