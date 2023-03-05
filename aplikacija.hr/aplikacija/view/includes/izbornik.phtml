@@ -8,6 +8,10 @@
     <ul class="dropdown menu" data-dropdown-menu>
       <li>
         <a href="<?= App::config('url');?>"><strong><?= App::config('nazivAPP');?></strong> </a></li>
+        <?php if(App::auth()): ?>
+        <li><a href="<?= App::config('url');?>nadzornaploca/index">Nadzorna ploca</a></li>
+          <?php endif;?>
+
       <li>
         <a href="<?= App::config('url');?>index/kontakt">Kontakt</a>
       </li>
